@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/" />
+    <title>Excellent portfilio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Lato", sans-serif;
+      }
+      body,
+      html {
+        height: 100%;
+
+        line-height: 1.8;
+      }
+    </style>
+  </head>
+  <body>
+    <my-app>
+      Now Loading.................
+    </my-app>
+    <script>
+      function myMap() {
+        myCenter = new google.maps.LatLng(38.585083, -121.297269);
+        var mapOptions = {
+          center: myCenter,
+          zoom: 10,
+          scrollwheel: false,
+          draggable: false,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(
+          document.getElementById("googleMap"),
+          mapOptions
+        );
+
+        var marker = new google.maps.Marker({
+          position: myCenter
+        });
+        marker.setMap(map);
+      }
+      function openNav() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+        var js = document.createElement("script");
+
+        js.type = "text/javascript";
+        js.src =
+          "https://maps.googleapis.com/maps/api/js?key=AIzaSyByCR_xlQJelJSbwu80lMWn-Lm-zka6maA&callback=myMap";
+        document.body.appendChild(js);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+{
+  "job_title": "Howdy!",
+  "job_description": "“You can, you should, and if you’re brave enough to start, you will.” – Stephen King",
+  "job_content": "I am presently working as software Developer at Vision Insurance Plan and I completed my Master’s at Virginia Internation University, College Station pursuing Professional Program in Computer Science. My general research interests lie in programming and automation. Though my interests lie in Datacenters, Cloud Services, legal frameworks, Intellectual properties, and Security particularly. Currently, I am working on my own Angular project in the free time related to a Orphans funding website. My advisor-cum-mentor is Dr. Flores, who is the director of the IT company based in India and USA. Another feather to my hat comes with my CPT at Campbellsville Univeristy in the Graduation Department under the supervisor, Dr. Bristow. I believe that for a person to reach any height of success, it involves an equal congregation of knowledge and managerial skills. To balance both the skills in me, I keep myself involved in extracurricular activities. I am the Vice President of Finance at the Under Graduate and Professional Student Council for the academic year 2012-13.",
+  "about_title": "A Dreamer. An Achiever.",
+  "about_content": "I hail from India, the land of mystery and diversity. I completed my school and undergraduation from my home country. I always had an inclination towards Computer sciences which fascinated me. This led me to pursue Computer Science during my high school and senior secondary school, and finally Computer science during undergraduation which was a perfect blend of courses. If I had to define myself in one word, I would choose the word - Learner! I believe that it is the urge of learning that can take a man to any pinnacle. This outlook of mine helped me complete two commendable and diversified internships at the most reputed companies in the world - Symphony Health Solutions., and Tech Aspect. I love travelling, playing cricket and long driving during my free time. Well, there is a lot left to explore about me and my work!",
+  "skills": [
+    {
+      "name": "Technologies",
+      "percent": 95
+    },
+    {
+      "name": "Programing Languages",
+      "percent": 95
+    },
+    {
+      "name": "Tools & Framework",
+      "percent": 90
+    },
+    {
+      "name": "Databases",
+      "percent": 85
+    },
+    {
+      "name": "Web/App Servers",
+      "percent": 80
+    },
+    {
+      "name": "Design Patterns",
+      "percent": 75
+    },
+    {
+      "name": "IDE tools",
+      "percent": 70
+    }
+  ],
+  "skill_detail": [
+    {
+      "title": "Technologies",
+      "individuals": ["HTML5", "CSS3", "Bootstrap", "JavaScript", "jQuery", "AJAX", "Angular", "Node JS", "XML", "XSD", "XSL/XSLT", "DOJO and JSON"]
+    },
+    {
+      "title": "Programing Languages",
+      "individuals": ["C", "C++", "JAVA", "Python", "SQL and PL/SQL"]
+    },
+    {
+      "title": "Tools & Framework",
+      "individuals": ["Struts", "Spring", "Hibernate", "Spring MVC", "Spring Web Flow", "Spring Security", "Spring Boot", "Junit"]
+    },
+    {
+      "title": "Databases",
+      "individuals": ["Oracle", "SQL", "IBM DB2", "NoSQL DB like MongoDB" ]
+    },
+    {
+      "title": "Web/App Servers",
+      "individuals": ["Web Sphere", "Apache Tomcat", "JBOSS Wild fly", "Web Logic Server" ]
+    },
+    {
+      "title": "Design Patterns",
+      "individuals": ["Singleton", "Factory", "Prototype", "Decorator", "Front Controller and DAO pattern" ]
+    },
+    {
+      "title": "IDE tools",
+      "individuals": ["Eclipse", "Spring Tool Suite (STS) and IntelliJ" ]
+    }
+  ],
+  "languages": [
+    { "name": "English", "percent": 100 },
+    { "name": "Telugu", "percent": 100 },
+    { "name": "Hindi", "percent": 95 }
+  ],
+  "projects_done": 15,
+  "associated_organisations": 17,
+  "events": 110,
+  "meetings": 270,
+  "work_text": "Click on the images to learn more..!",
+  "proj1_text": "Developed my undergraduate university website",
+  "proj2_text": "Zerraf technologies Internship",
+  "proj3_text": "4-DAir Traffic Visualization, Capstone Project in Masters",
+  "proj4_text": "Freelance Work",
+  "resume_url": "https://drive.google.com/file/d/1cGzrLwmgYkUnbPW7UWqyAaHF0EQNC8jh/view?usp=sharing",
+  "app_text1": "Appointments here please!",
+  "app_text2": "Thank you!",
+
+  "link_url": "https://www.linkedin.com/in/pruthvi-r-2569a3174/",
+  "facebook_url": "https://www.facebook.com/prudhvi.chinthareddy",
+  "instagram_url": "https://www.instagram.com/prudhvi2223/",
+  "snapchat_url": "https://www.snapchat.com/add/prudhvichintha",
+  "twitter_url": "https://twitter.com/PChinthareddy"
+}

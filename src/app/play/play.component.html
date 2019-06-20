@@ -1,0 +1,270 @@
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg "></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav
+  class="w3-sidebar w3-animate-right w3-large"
+  style="display:block;padding-top:150px;right:0;z-index:2; width: 150px; background-color: rgba(0,5,30,0.8);"
+  id="mySidebar"
+>
+  <a
+    href="javascript:void(0)"
+    onclick="closeNav()"
+    class="w3-xlarge w3-display-topright"
+    style="padding:0 12px;"
+  >
+    <i class="fa fa-remove w3-text-white w3-hover-text-red"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a
+      href="home"
+      class="w3-bar-item w3-button w3-padding-large w3-hover-blue-gray w3-text-white"
+    >
+      <i class="fa fa-home w3-xxlarge"></i>
+      <p>RETURN</p>
+    </a>
+    <a
+      href="play#blog"
+      class="w3-bar-item w3-button w3-padding-large w3-hover-blue-gray w3-text-white"
+    >
+      <i class="fa fa-user w3-xxlarge"></i>
+      <p>My Stories</p>
+    </a>
+    <a
+      href="play#twitter"
+      class="w3-bar-item w3-button w3-padding-large w3-hover-blue-gray w3-text-white"
+    >
+      <i class="fa fa-twitter w3-xxlarge"></i>
+      <p>Twitter</p>
+    </a>
+    <a
+      href="play#fb"
+      class="w3-bar-item w3-button w3-padding-large w3-hover-blue-gray w3-text-white"
+    >
+      <i class="fa fa-facebook-official w3-xxlarge"></i>
+      <p>Facebook</p>
+    </a>
+    <a
+      href="play#insta"
+      class="w3-bar-item w3-button w3-padding-large w3-hover-blue-gray w3-text-white"
+    >
+      <i class="fa fa-instagram w3-xxlarge"></i>
+      <p>Instagram</p>
+    </a>
+
+    <a
+      href="play#contact"
+      class="w3-bar-item w3-button w3-padding-large w3-hover-blue-gray w3-text-white"
+    >
+      <i class="fa fa-envelope w3-xxlarge"></i>
+      <p>Contact</p>
+    </a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+  <!-- Menu icon to open sidebar -->
+  <span
+    class=" w3-button w3-top w3-xxlarge w3-text-black w3-hover-text-black w3-opacity-max w3-hover-none w3-hover-opacity-off"
+    style="width:auto;right:0; "
+    onclick="openNav()"
+    ><i class="fa fa-bars"></i
+  ></span>
+
+  <!-- Header -->
+  <header
+    class="w3-container w3-center w3-white w3-card-4"
+    style="padding:128px 16px;"
+    id="home"
+  >
+    <h1 class="w3-jumbo">
+      <b>{{ firstname }} {{ lastname }}</b>
+    </h1>
+    <p>{{ simple_you }}</p>
+    <img
+      src="assets/play/play-1.jpg"
+      class="w3-image w3-hide-large w3-hide-small w3-round"
+      style="display:block;width:60%;margin:auto;"
+    />
+    <img
+      src="assets/play/play-1.jpg"
+      class="w3-image w3-hide-large w3-hide-medium w3-round"
+      width="1000"
+      height="1333"
+    />
+  </header>
+  <br />
+
+  <div class="w3-content w3-justify w3-text-grey w3-padding-16">
+    <h2>{{ big_title }}</h2>
+    <hr class="w3-opacity-min" />
+    <h3>{{ small_title }}</h3>
+    <p *ngFor="let item of content">
+      {{ item }}
+    </p>
+    <hr class="w3-opacity-min" />
+  </div>
+
+  <!-- Portfolio Section -->
+  <div class=" w3-content" id="blog">
+    <h2 class="w3-text-blue-grey">
+      <span class="w3-xxxlarge">S</span>tories from
+      <br class="w3-hide-medium w3-hide-large" />
+      My DAIRY <i class="fa fa-book"></i>
+    </h2>
+    <hr class="w3-opacity" />
+
+    <!-- Grid for photos -->
+    <div
+      class="w3-row-padding"
+      style="margin:0 -16px; height: 460px; overflow: scroll"
+    >
+      <div class="w3-half">
+        <div class="w3-display-container w3-card-4">
+          <a href="story" style="text-decoration: none;"
+            ><img
+              src="assets/story/story_pic.jpg"
+              style="width:100%"
+              class="w3-hover-opacity"
+            />
+            <div class=" w3-display-bottom w3-container ">
+              <p class="w3-medium w3-center w3-opacity-min ">
+                {{ story_title }} Click for more
+              </p>
+            </div></a
+          >
+        </div>
+        <br />
+
+        <h1 class=" w3-hide-small w3-large w3-text-grey">
+          {{ story_footer }}
+        </h1>
+        <h3 class=" w3-hide-medium w3-hide-large w3-large w3-text-grey">
+          {{ story_footer }}
+        </h3>
+      </div>
+
+      <div class="w3-half"></div>
+    </div>
+    <!-- End Portfolio Section -->
+  </div>
+
+  <!-- About Section -->
+  <hr class="w3-opacity-min" id="twitter" />
+  <h1 class="w3-text-cyan">Twitter <i class="fa fa-twitter"></i></h1>
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32">
+    <div>
+      <a
+        class="twitter-timeline"
+        data-width="100%"
+        data-height="400px"
+        href="{{ twitter_url1 }}"
+        >{{ twitter_text1 }}</a
+      >
+      <br />
+      <a
+        href="{{ twitter_url2 }}"
+        class="twitter-follow-button"
+        data-show-count="false"
+        >{{ twitter_text2 }}</a
+      >
+    </div>
+
+    <hr class="w3-opacity-min" id="fb" />
+    <h1 class="w3-text-indigo">
+      Facebook <i class="fa fa-facebook-official "></i>
+    </h1>
+    <div>
+      <a href="{{ facebook_url }}" style="cursor: pointer">
+        <img src="../../assets/play/facebook_photo.jpg" />
+      </a>
+    </div>
+
+    <hr class="w3-opacity-min" id="insta" />
+    <h1 class="w3-text-purple">Instagram <i class="fa fa-instagram"></i></h1>
+    <div>
+      <blockquote
+        class="instagram-media"
+        data-instgrm-captioned
+        data-instgrm-version="7"
+        style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"
+      >
+        <div style="padding:8px;">
+          <div
+            style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:1.0% 0; text-align:center; width:100%;"
+          >
+            <a style="cursor: pointer" href="{{ instagram_url }}"
+              ><img src="../../assets/play/instagram.jpg" width="98%"
+            /></a>
+          </div>
+          <p style=" margin:8px 0 0 0; padding:0 4px;">
+            <a
+              href="{{ instagram_url }}"
+              style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;"
+              target="_blank"
+              >{{ instagram }}</a
+            >
+          </p>
+          <p
+            style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"
+          >
+            {{ posted_by }} on
+            <time
+              style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;"
+              datetime="2017-03-02T19:07:29+00:00"
+              >{{ posted_time }}</time
+            >
+          </p>
+        </div>
+      </blockquote>
+      <script
+        async
+        defer
+        src="//platform.instagram.com/en_US/embeds.js"
+      ></script>
+    </div>
+
+    <hr class="w3-opacity-min" id="bla" />
+  </div>
+
+  <!-- Contact Section -->
+  <div
+    class="w3-padding-32 w3-content w3-text-grey"
+    id="contact"
+    style="margin-bottom:64px"
+  >
+    <h2 class="w3-text-blue-gray">Ping me!</h2>
+    <hr class="w3-opacity-min" />
+
+    <div class="w3-section w3-text-blue-gray">
+      <p>
+        <i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>
+        {{ address }}
+      </p>
+      <p>
+        <i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i>
+        {{ email }}
+        <span class="w3-hide-small">prudchin@campus.viu.edu</span> <br />
+      </p>
+    </div>
+
+    <!-- Google Map -->
+    <div id="googleMap" style="width:100%;height:400px;margin:20px 0;"></div>
+
+    <!-- End Contact Section -->
+  </div>
+
+  <!-- Footer -->
+  <footer
+    class="w3-container w3-padding-16 w3-center w3-text-white w3-xlarge"
+    style="margin:-24px; background-color: rgba(0,5,30,0.8);"
+  >
+    <p class="w3-medium">{{ copyright }}</p>
+    <p class="w3-small">{{ developer }}</p>
+    <!-- End footer -->
+  </footer>
+
+  <!-- END PAGE CONTENT -->
+</div>

@@ -1,0 +1,10 @@
+.w3-row-padding img {
+  margin-bottom: 12px;
+}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../assets/story/story_pic.jpg);
+  min-height: 100%;
+}

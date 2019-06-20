@@ -1,0 +1,96 @@
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div
+    class="w3-bar"
+    id="myNavbar"
+    style="background-color: rgba(18,0,5,0.7); color: rgba(255,255,255,0.7);"
+  >
+    <a
+      href="work#portfolio"
+      class="w3-bar-item w3-button w3-hover-black "
+      style="background-color: rgba(18,0,5,0.05); color: rgba(255,255,255,0.7); text-decoration: none;"
+      ><i class="fa fa-arrow-left"></i> RETURN</a
+    >
+  </div>
+
+  <!-- Navbar on small screens -->
+
+  <div
+    id="navDemo"
+    class="w3-bar-block w3-hide w3-hide-large w3-hide-medium "
+  ></div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+
+<!-- Container (About Section) -->
+<div style="background-color: rgb(58,0,25);" class="w3-text-white">
+  <div
+    class="w3-content w3-container w3-padding-64"
+    id="about"
+    style="background-color: rgb(58,0,25);"
+  >
+    <div class="w3-container w3-padding-16 w3-center">
+      <h2 class="w3-center">
+        {{ title }}
+      </h2>
+      <hr />
+
+      <div
+        id="myCarousel"
+        class="carousel slide"
+        style="width: 100%; "
+        data-ride="carousel"
+      >
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li
+            *ngFor="let item of [].constructor(count); let i = index"
+            data-target="#myCarousel"
+            class="{{ i == 0 ? 'active' : '' }}"
+            attr.data-slide-to="{{ i }}"
+          ></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div
+            *ngFor="let num of [].constructor(count); let i = index"
+            class="{{ i == 0 ? 'item active' : 'item' }}"
+          >
+            <img
+              width="1200"
+              height="700"
+              src="../.././assets/project/proj3pic-{{ i + 1 }}.jpg"
+            />
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="right carousel-control"
+            href="#myCarousel"
+            data-slide="next"
+          >
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <br />
+      <div class="w3-container w3-padding-16 w3-justify">
+        <p class="w3-justify" *ngFor="let item of content">
+          {{ item }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="w3-center w3-padding-16 w3-text-white w3-black">
+    <p>{{ copyright }}</p>
+    <p class="w3-small">{{ developer }}</p>
+  </footer>
+</div>

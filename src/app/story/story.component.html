@@ -1,0 +1,99 @@
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+  <!-- Menu icon to open sidebar -->
+  <a href="play#blog" style="text-decoration: none;"
+    ><span
+      class=" w3-button w3-top w3-xxlarge w3-text-black w3-hover-text-black w3-opacity-max w3-hover-none w3-hover-opacity-off"
+      style="width:auto;right:0; "
+      ><i class="fa fa-arrow-left"></i></span
+  ></a>
+
+  <!-- Header -->
+  <header
+    class="w3-container w3-center w3-white w3-card-4"
+    style="padding:16px 16px;"
+    id="home"
+  >
+    <div class="w3-container w3-padding-16 w3-center">
+      <h3 class="w3-center">
+        {{ title }}
+      </h3>
+      <hr />
+
+      <div
+        id="myCarousel"
+        class="carousel slide w3-card-4 "
+        style="width: 100%; "
+        data-ride="carousel"
+      >
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li
+            *ngFor="let item of [].constructor(count); let i = index"
+            data-target="#myCarousel"
+            class="{{ i == 0 ? 'active' : '' }}"
+            attr.data-slide-to="{{ i }}"
+          ></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div
+            *ngFor="let num of [].constructor(count); let i = index"
+            class="{{ i == 0 ? 'item active' : 'item' }}"
+          >
+            <img
+              width="1200"
+              height="700"
+              src="../../assets/story/story_pic-{{ i + 1 }}.jpg"
+            />
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <br />
+
+  <div class="w3-content w3-justify w3-text-grey w3-padding-16">
+    <h2>{{ date }}</h2>
+    <hr class="w3-opacity-min" />
+
+    <p *ngFor="let item of content">
+      {{ item }}
+    </p>
+    <p>
+      <em>{{ footer }}</em>
+    </p>
+    <p>{{ simple_you }}</p>
+  </div>
+
+  <br /><br />
+
+  <!-- Footer -->
+  <footer
+    class="w3-container w3-padding-32 w3-center w3-text-white w3-xlarge"
+    style="margin:-24px; background-color: rgba(0,5,30,0.8);"
+  >
+    <p class="w3-medium">{{ copyright }}</p>
+    <p class="w3-small">{{ developer }}</p>
+    <!-- End footer -->
+  </footer>
+
+  <!-- END PAGE CONTENT -->
+</div>

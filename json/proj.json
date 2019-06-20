@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Developing my undergraduate university website",
+    "content": [
+      "The aim of this is to extend the knowledge of my technical skills",
+      "This project is at an early stage of development by my senior professors at university back in india. So far, the development was on initial stage when i joined the team, I worked on writing the html, css, javascript and later SQL query's for the student information to be retrieved like student id number, last name, first name, term..etc. Later we did some research on hacking and noticed some vulnerabilities of the site we are working on and handled everything by end of the year. There are two applications i worked on one of them is the internal application used by my university faculty and other one is the university website i have attached the pictures of the first website i worked on. So far, the study & work has involved training in web technologies."
+    ],
+    "count": 7
+  },
+  {
+    "title": "Zerraf technologies Internship",
+    "content": [
+      "The internship at Zerraf technologies gave me the first exposure in the information technology world. I worked with Test Engineer Team under the supervision of Mr. Chandra Shekar, as i have prior experience on development as well later moved me to the development team after some training. The training involved understanding the business logic, design pattern, Requirement gathering, Designing, Coding, Testing, and Maintenance and later got the chance to write code, execute challenging projects, on both backend and frontend. The training was designed in a way to first study the basic rules then move on. My job role later involved writing API, deploying, continuous integration. As an intern i learned a lot in this company by working with different teams under different applications. In addition, I learned some about the tools but did not get a chance to work on any at that point of time. Working on application related to Front End tasks were One of my favourite."
+    ],
+    "count": 2
+  },
+  {
+    "title": "4-DAir Traffic Visualization, Capstone Project in Masters",
+    "content": [
+      "Worked to demonstrate proof-of-concept that an application is able to show locations, camera applications, imaginary layers, 3-D Modelling objects, different track paths with different colors and  boundaries on the server: all these integrating into one. Effective information visualization techniques are needed to be deployed for displaying all data accordance with geo-temporal location. my design and code is easier to overview and maintain. Based on that, it will be easier to improve by adding more capabilities. Use a variety of technologies such as Cesium, Node.js, and WebStorm.",
+      "In future, there would be continued programming to develop my prototype to live application. I added new features to the application like (Distance Calculation, Object Following, Multiple Visualizations,Time based playback controls) and adding more animations to the prototypes and customization and track paths with colors.. Continued to make my application ready for use. Maintain proper design for software flexibility. Implementation of Trial and lead and object following paths is done."
+    ],
+    "count": 4
+  },
+  {
+    "title": "Freelance Work",
+    "content": [
+      "I started working as a freelancer for better work-life balance, Being my own boss and freedom to choose my working hours and a big chance to work on more interesting projects",
+      "The Applications i worked as a freelancer with a team who hosted enrollment website for premier insurance clients that will allow a user to establish an account that will allow registration of multiple cards to one username and password. They will be able to receive the alerts via SMS, email or both when their card is used in a country that is determined to be outside their home country. The enrollment web service utilizes the in-Control platform to deliver the alerts.",
+      "Though the path in this career field isn’t always as straightforward as it might be. So, I am self-employed till now, i thought its time to work on a contractual basis."
+    ],
+    "count": 4
+  }
+]

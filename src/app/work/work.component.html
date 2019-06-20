@@ -1,0 +1,394 @@
+<div class="w3-top">
+  <div
+    class="w3-bar"
+    id="myNavbar"
+    style="background-color: rgba(18,0,5,0.7); color: rgba(255,255,255,0.7);"
+  >
+    <a
+      class="w3-bar-item w3-hover-black w3-hide-medium w3-hide-large w3-right"
+      href="javascript:void(0);"
+      onclick="toggleFunction()"
+      title="Toggle Navigation Menu"
+    >
+      <i class="fa fa-bars"></i>
+    </a>
+    <a
+      href="home"
+      class="w3-bar-item w3-button w3-hover-black "
+      style="background-color: rgba(18,0,5,0.05); color: rgba(255,255,255,0.7);"
+      ><i class="fa fa-arrow-left"></i> RETURN</a
+    >
+    <a
+      href="work#about"
+      class="w3-bar-item w3-button w3-hide-small w3-hover-black "
+      style="background-color: rgba(18,0,5,0.05); color: rgba(255,255,255,0.7);"
+      ><i class="fa fa-user"></i> ABOUT</a
+    >
+    <a
+      href="work#portfolio"
+      class="w3-bar-item w3-button w3-hide-small w3-hover-black "
+      style="background-color: rgba(18,0,5,0.05); color: rgba(255,255,255,0.7);"
+      ><i class="fa fa-th"></i> PORTFOLIO</a
+    >
+    <a
+      href="work#contact"
+      class="w3-bar-item w3-button w3-hide-small w3-hover-black "
+      style="background-color: rgba(18,0,5,0.05); color: rgba(255,255,255,0.7);"
+      ><i class="fa fa-envelope"></i> CONTACT</a
+    >
+  </div>
+
+  <!-- Navbar on small screens -->
+
+  <div id="navDemo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium ">
+    <a
+      href="work#about"
+      class="w3-bar-item w3-button w3-hover-black "
+      style="background-color: rgba(18,0,5,0.5); color: rgba(255,255,255,0.7);"
+      onclick="toggleFunction()"
+      >ABOUT</a
+    >
+    <a
+      href="work#portfolio"
+      class="w3-bar-item w3-button w3-hover-black"
+      style="background-color: rgba(18,0,5,0.5); color: rgba(255,255,255,0.7);"
+      onclick="toggleFunction()"
+      >PORTFOLIO</a
+    >
+    <a
+      href="work#contact"
+      class="w3-bar-item w3-button w3-hover-black"
+      style="background-color: rgba(18,0,5,0.5); color: rgba(255,255,255,0.7);"
+      onclick="toggleFunction()"
+      >CONTACT</a
+    >
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span
+      class="w3-center w3-padding-large w3-xlarge w3-text-white w3-wide w3-animate-opacity"
+      style="background-color: rgba(18,0,5,0.9);"
+      >Prudhvi <span class="w3-hide-small">Chinthareddy</span>
+    </span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div style="background-color: rgb(58,0,25);" class="w3-text-white">
+  <div
+    class="w3-content w3-container w3-padding-64"
+    id="about"
+    style="background-color: rgb(58,0,25);"
+  >
+    <h1 class="w3-center">{{ job_title }}</h1>
+    <p class="w3-center">
+      <em>{{ job_description }}</em>
+    </p>
+    <p style="text-align: justify;">
+      {{ job_content }}
+    </p>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        <p style="font-size: 16px;">
+          <b><i class="fa fa-user w3-margin-right"></i>{{ about_title }}</b>
+        </p>
+        <br />
+        <img
+          src="../../assets/work/work-me.jpg"
+          class="w3-round w3-image "
+          alt="Photo of Me"
+          width="350"
+          height="350"
+        />
+      </div>
+
+      <!-- Hide this text on small devices -->
+      <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <p style="text-align: justify; font-size: 15px;">
+          {{ about_content }}
+        </p>
+      </div>
+    </div>
+    <p class="w3-xlarge w3-center w3-padding-16">I' m really good at:</p>
+
+    <div style="margin-bottom: 30px" *ngFor="let item of skills">
+      <p>{{ item.name }}:</p>
+      <div class="w3-light-grey">
+        <div
+          class="w3-container w3-padding-small w3-dark-grey w3-center"
+          [ngStyle]="{ width: item.percent + '%' }"
+        >
+          {{ item.percent }}%
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 15px" *ngFor="let skill of skill_detail">
+      <h4>{{ skill.title }}</h4>
+      <ul>
+        <li *ngFor="let item of skill.individuals">{{ item }}</li>
+      </ul>
+    </div>
+
+    <h4>Languages:</h4>
+
+    <div *ngFor="let item of languages">
+      <p>{{ item.name }}:</p>
+
+      <div class="w3-light-grey">
+        <div
+          class="w3-container w3-padding-small w3-dark-grey w3-center"
+          style="width:50%"
+          [ngStyle]="{ width: item.percent + '%' }"
+        >
+          {{ item.percent }}%
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row w3-center w3-padding-16 w3-white">
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge"> {{ projects_done }}+ </span><br />
+      Projects Done
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge"> {{ associated_organisations }}+ </span><br />
+      Associated Organisations
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge"> {{ events }}+ </span><br />
+      Events
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">{{ meetings }}+</span><br />
+      Meetings
+    </div>
+  </div>
+</div>
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div style="background-color: rgb(58,0,25);" class="w3-text-white">
+  <div
+    class="w3-content w3-container w3-padding-64"
+    id="portfolio"
+    style="background-color: rgb(58,0,25);"
+  >
+    <h3 class="w3-center">MY WORK</h3>
+
+    <p class="w3-center">
+      <em>{{ work_text }}</em>
+    </p>
+    <br />
+
+    <div class="w3-row-padding w3-center">
+      <div class="w3-col m3 w3-display-container w3-padding-16 ">
+        <a href="work/proj1" style="text-decoration: none;"
+          ><img
+            src="assets/project/proj1pic.jpg"
+            style="width:100%"
+            class="w3-hover-opacity"
+          />
+          <div class=" w3-display-bottomleft w3-container w3-display-hover">
+            <p class="w3-tiny w3-opacity-min w3-padding-16">
+              {{ proj1_text }}... more
+            </p>
+          </div></a
+        >
+      </div>
+
+      <div class="w3-col m3 w3-display-container w3-padding-16 ">
+        <a href="work/proj2" style="text-decoration: none;"
+          ><img
+            src="assets/project/proj2pic.jpg"
+            style="width:100%"
+            class="w3-hover-opacity"
+          />
+          <div class=" w3-display-bottommiddle w3-container w3-display-hover">
+            <p class="w3-tiny w3-opacity-min w3-padding-16">
+              {{ proj2_text }}... more
+            </p>
+          </div></a
+        >
+      </div>
+
+      <div class="w3-col m3 w3-display-container w3-padding-16 ">
+        <a href="work/proj3" style="text-decoration: none;"
+          ><img
+            src="assets/project/proj3pic.jpg"
+            style="width:100%"
+            class="w3-hover-opacity"
+          />
+          <div class=" w3-display-bottomleft w3-container w3-display-hover">
+            <p class="w3-tiny w3-opacity-min w3-padding-16">
+              {{ proj3_text }}... more
+            </p>
+          </div></a
+        >
+      </div>
+
+      <div class="w3-col m3 w3-display-container w3-padding-16 ">
+        <a href="work/proj4" style="text-decoration: none;"
+          ><img
+            src="assets/project/proj4pic.jpg"
+            style="width:100%"
+            class="w3-hover-opacity"
+          />
+          <div class=" w3-display-bottomleft w3-container w3-display-hover">
+            <p class="w3-tiny w3-opacity-min w3-padding-16">
+              {{ proj4_text }}... more
+            </p>
+          </div></a
+        >
+      </div>
+    </div>
+
+    <div class="w3-row-padding w3-center w3-section">
+      <br />
+
+      <div class="w3-center">
+        <h3>My Resume</h3>
+        <p class="w3-center"><em>Click on the image for Resume</em></p>
+        <div>
+          <a href="{{ resume_url }}" target="_blank"
+            ><img
+              src="assets/work/Resume_page.jpg"
+              style="width:25%"
+              class="w3-hover-opacity w3-hide-small w3-hide-medium w3-card-4"
+              alt="Resume"
+          /></a>
+          <a href="{{ resume_url }}" target="_blank"
+            ><img
+              src="assets/work/Resume_page1.jpg"
+              style="width:70%"
+              class="w3-hover-opacity w3-hide-large w3-hide-medium w3-card-4"
+              alt="Resume"
+          /></a>
+          <a href="{{ resume_url }}" target="_blank"
+            ><img
+              src="assets/work/Resume_page2.jpg"
+              style="width:35%"
+              class="w3-hover-opacity w3-hide-large w3-hide-small w3-card-4"
+              alt="Resume"
+          /></a>
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+</div>
+
+<div class="w3-row w3-center w3-padding-16 w3-white">
+  <div class="w3-quarter w3-section"></div>
+</div>
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span
+    class="w3-button w3-large w3-black w3-display-topright"
+    title="Close Modal Image"
+    ><i class="fa fa-remove"></i
+  ></span>
+  <div
+    class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
+  >
+    <img id="img01" class="w3-image" />
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div style="background-color: rgb(58,0,25);">
+  <div class="w3-content w3-container w3-padding-64 w3-text-white" id="contact">
+    <h3 class="w3-center">{{ app_text1 }} <i class="fa fa-smile-o"></i></h3>
+    <p class="w3-center">
+      <em>{{ app_text2 }}</em>
+    </p>
+
+    <div class="w3-row w3-padding-16 w3-section w3-hide-small">
+      <div class="w3-col m12 w3-container">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=prudchin%40campus.viu.edu&ctz=America%2FLos_Angeles"
+          style="border-width:0"
+          width="100%"
+          height="500"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
+    </div>
+
+    <div
+      class="w3-row w3-padding-16 w3-section w3-hide-medium w3-hide-large"
+      style="max-width:100%"
+    >
+      <div class="w3-col m12 w3-container">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=prudchin%40campus.viu.edu&ctz=America%2FLos_Angeles"
+          style="border-width:0"
+          width="310px"
+          height="500"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="w3-row w3-padding-2 w3-section">
+      <div class="w3-col m12 w3-container w3-section">
+        <div class="w3-large w3-margin-bottom">
+          <p>
+            Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a
+            note:
+          </p>
+          <i class="fa fa-map-marker fa-fw  w3-xlarge w3-margin-right"></i>
+          {{ address }}<br />
+          <i class="fa fa-envelope fa-fw  w3-xlarge w3-margin-right"></i>
+          {{ email }}
+          <span class="w3-hide-small">prudchin@campus.viu.edu</span> <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer
+  class="w3-center w3-padding-32 w3-text-black w3-white w3-hover-black w3-hover-text-white"
+>
+  <a href="work#home" class="w3-btn w3-padding w3-light-grey w3-hover-white"
+    ><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a
+  >
+  <div class="w3-xlarge w3-section">
+    <a href="{{ link_url }}"
+      ><i class="fa fa-linkedin w3-hover-text-blue"></i
+    ></a>
+    <a href="{{ facebook_url }}"
+      ><i class="fa fa-facebook-official w3-hover-text-blue"></i
+    ></a>
+    <a href="{{ instagram_url }}"
+      ><i class="fa fa-instagram w3-hover-text-red"></i
+    ></a>
+    <a href="{{ snapchat_url }}">
+      <i class="fa fa-snapchat w3-hover-text-yellow"></i
+    ></a>
+    <a href="{{ twitter_url }}"
+      ><i class="fa fa-twitter w3-hover-text-blue"></i
+    ></a>
+  </div>
+  <p>{{ copyright }}</p>
+  <p class="w3-small">{{ developer }}</p>
+</footer>
