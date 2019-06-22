@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import * as projJson from "../../../assets/json/proj.json";
-import * as commonJson from "../../../assets/json/common.json";
+import { Component, OnInit } from '@angular/core';
+import * as projJson from '../../../../assets/json/proj.json';
+import * as commonJson from '../../../../assets/json/common.json';
 
 @Component({
-  selector: "proj3",
-  templateUrl: "./proj3.component.html",
-  styleUrls: ["./proj3.component.css"]
+  selector: 'app-proj3',
+  templateUrl: './proj3.component.html',
+  styleUrls: ['./proj3.component.css']
 })
 export class Proj3Component implements OnInit {
   title: string;

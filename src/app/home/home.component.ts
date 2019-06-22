@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import * as homeJson from "../../assets/json/home.json";
-import * as commonJson from "../../assets/json/common.json";
+import { Component, OnInit } from '@angular/core';
+import * as homeJson from '../../assets/json/home.json';
+import * as commonJson from '../../assets/json/common.json';
 
 @Component({
-  selector: "home",
-  templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.css"]
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
   home_text: string;

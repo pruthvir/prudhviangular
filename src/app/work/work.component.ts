@@ -1,12 +1,12 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
-import * as workJson from "../../assets/json/work.json";
-import * as commonJson from "../../assets/json/common.json";
+import * as workJson from '../../assets/json/work.json';
+import * as commonJson from '../../assets/json/common.json';
 
 @Component({
-  selector: "work",
-  templateUrl: "./work.component.html",
-  styleUrls: ["./work.component.css"]
+  selector: 'app-work',
+  templateUrl: './work.component.html',
+  styleUrls: ['./work.component.css']
 })
 export class WorkComponent implements OnInit {
   job_title: string;

@@ -1,11 +1,11 @@
-import { Component, OnInit } from "@angular/core";
-import * as storyJson from "../../assets/json/story.json";
-import * as commonJson from "../../assets/json/common.json";
+import { Component, OnInit } from '@angular/core';
+import * as storyJson from '../../assets/json/story.json';
+import * as commonJson from '../../assets/json/common.json';
 
 @Component({
-  selector: "story",
-  templateUrl: "./story.component.html",
-  styleUrls: ["./story.component.css"]
+  selector: 'app-story',
+  templateUrl: './story.component.html',
+  styleUrls: ['./story.component.css']
 })
 export class StoryComponent implements OnInit {
   title: string;

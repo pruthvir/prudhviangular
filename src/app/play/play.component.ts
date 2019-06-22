@@ -1,12 +1,12 @@
-import { Component, OnInit } from "@angular/core";
-import * as commonJson from "../../assets/json/common.json";
-import * as storyJson from "../../assets/json/story.json";
-import * as playJson from "../../assets/json/play.json";
+import { Component, OnInit } from '@angular/core';
+import * as commonJson from '../../assets/json/common.json';
+import * as storyJson from '../../assets/json/story.json';
+import * as playJson from '../../assets/json/play.json';
 
 @Component({
-  selector: "play",
-  templateUrl: "./play.component.html",
-  styleUrls: ["./play.component.css"]
+  selector: 'app-play',
+  templateUrl: './play.component.html',
+  styleUrls: ['./play.component.css']
 })
 export class PlayComponent implements OnInit {
   big_title: string;
